@@ -1,0 +1,18 @@
+<div class="form-signin">
+  <h2 class="form-signin-heading">Please sign in</h2>
+  <label for="inputUser" class="sr-only">Username</label>
+  <input type="text" id="inputUser" class="form-control" ng-model="user.username" ng-focus="hideErr()" placeholder="username" required="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" ng-model="user.password" ng-focus="hideErr()" placeholder="password" required="">
+  <div ng-show="error" class="errorbox">
+    <span class="center list-group-item list-group-item-danger">
+      Incorrect username or password. Check the fields and try again.
+    </span>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="user.remember"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" ng-click="doLogin()">Sign in</button>
+</div>
